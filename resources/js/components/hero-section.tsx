@@ -1,34 +1,124 @@
-import { Button } from '@/components/ui/button';
-import GradientText from './gradientText';
+import { Button } from "@/components/ui/button";
 
 export default function Hero() {
     return (
-        <div id="hero" className="flex h-screen items-center bg-black">
-            <div className="mx-auto w-[80%] text-center text-white">
-                <h1 className="p-4 text-4xl font-extrabold md:text-7xl">
-                    Hello, My Name is
-                    <GradientText
-                        colors={['#40ffaa', '#4079ff', '#40ffaa', '#4079ff', '#40ffaa']}
-                        animationSpeed={3}
-                        showBorder={false}
-                        className="custom-class font-extrabold md:text-7xl"
-                    >
-                        Romiz Aisy
-                    </GradientText>
+        <section
+            id="hero"
+            className="
+                min-h-screen
+                bg-[#F5F0E8]
+                text-[#1F1F1F]
+                flex
+                items-center
+            "
+        >
+            <div
+                className="
+                    w-[90%]
+                    max-w-[1200px]
+                    mx-auto
+                    flex
+                    flex-col
+                    justify-center
+                "
+            >
+                {/* Small Editorial Label */}
+                <p
+                    className="
+                        uppercase
+                        tracking-[0.35em]
+                        text-xs
+                        text-[#7A746D]
+                        mb-10
+                    "
+                >
+                    Portfolio · 2026
+                </p>
+
+                {/* Main Title */}
+                <h1
+                    className="
+                        font-serif
+                        text-6xl
+                        md:text-8xl
+                        leading-[0.95]
+                        font-normal
+                        max-w-4xl
+                    "
+                >
+                    Romiz Aisy
                 </h1>
-                <p className="mb-6">Junior Web Developer</p>
-                <div className="flex justify-center items-center gap-4">
-                    <Button variant={'customSection'} size={'lg'}>
-                        <a href="#contact">Contact</a>
-                       
-                    </Button>
-                    <Button variant={'customSection'} size={'lg'}>
-                        <a href="document/CV_RomizAisy.pdf" target='_blank'>Resume</a>
-                    </Button>
+
+                {/* Description */}
+                <p
+                    className="
+                        mt-8
+                        max-w-xl
+                        text-lg
+                        leading-relaxed
+                        text-[#5D5852]
+                    "
+                >
+                    Designing and building digital products,
+                    educational platforms, and creative tools
+                    with a focus on simplicity and thoughtful
+                    user experiences.
+                </p>
+
+                {/* Actions */}
+                <div className="mt-12 flex flex-wrap gap-8">
+                    <a
+                        href="#project"
+                        className="
+                            border-b
+                            border-[#1F1F1F]
+                            pb-1
+                            text-sm
+                            uppercase
+                            tracking-[0.15em]
+                            hover:opacity-60
+                            transition-opacity
+                        "
+                    >
+                        View Work
+                    </a>
+
+                    <a
+                        href="document/CV_RomizAisy.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+                            border-b
+                            border-[#1F1F1F]
+                            pb-1
+                            text-sm
+                            uppercase
+                            tracking-[0.15em]
+                            hover:opacity-60
+                            transition-opacity
+                        "
+                    >
+                        Resume
+                    </a>
+                </div>
+
+                {/* Bottom Metadata */}
+                <div
+                    className="
+                        mt-24
+                        flex
+                        flex-col
+                        md:flex-row
+                        gap-6
+                        text-sm
+                        text-[#7A746D]
+                    "
+                >
+                    <span>Semarang, Indonesia</span>
+                    <span>Web Development</span>
+                    <span>Laravel · React · Flask</span>
                 </div>
             </div>
-
-            <div></div>
-        </div>
+        </section>
     );
 }

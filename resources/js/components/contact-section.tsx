@@ -1,45 +1,112 @@
-import SpotlightCard from './SpotlightCard';
+export default function Contact() {
+    return (
+        <section
+            id="contact"
+            className="
+                bg-[#F5F0E8]
+                text-[#1F1F1F]
+                py-32
+                scroll-mt-24
+            "
+        >
+            <div className="w-[90%] max-w-[1200px] mx-auto">
 
-export default function Contact(){
-    return(
-        <section id="contact" className="h-full bg-black text-white scroll-smooth">
-            <div className="mx-auto w-[80%]">
-                <div className="mx-auto w-[80%]">
-                    <p className="py-5 text-4xl md:text-6xl font-light">// Contact</p>
-                    <div className="mx-auto w-[80%] flex md:flex-nowrap flex-wrap justify-center gap-4 py-8">
-
-                    
-
-                    
-
-                    
-
-                    <SpotlightCard
-                        className="custom-spotlight-card flex w-full  items-center justify-center font-semibold"
-                        spotlightColor="rgba(3, 207, 252, 0.8)"
+                {/* Header */}
+                <div className="mb-20">
+                    <p
+                        className="
+                            text-xs
+                            uppercase
+                            tracking-[0.35em]
+                            text-[#7A746D]
+                            mb-6
+                        "
                     >
-                        romizaisyweb@gmail.com
-                    </SpotlightCard>
+                        Contact
+                    </p>
 
-                    <SpotlightCard
-                        className="custom-spotlight-card flex w-full items-center justify-center font-semibold"
-                        spotlightColor="rgba(3, 207, 252, 0.8)"
+                    <h2
+                        className="
+                            font-serif
+                            text-5xl
+                            md:text-7xl
+                            font-normal
+                            leading-none
+                        "
                     >
-                        +6282136374249
-                    </SpotlightCard>
-
-                    <SpotlightCard
-                        className="custom-spotlight-card flex w-full items-center justify-center font-semibold"
-                        spotlightColor="rgba(3, 207, 252, 0.8)"
-                    >
-                        @romizaisyy
-                    </SpotlightCard>
-                
+                        Let's Work Together
+                    </h2>
                 </div>
+
+                {/* Intro */}
+                <div className="max-w-2xl mb-20">
+                    <p
+                        className="
+                            text-xl
+                            md:text-2xl
+                            font-serif
+                            leading-relaxed
+                            mb-8
+                        "
+                    >
+                        Open to freelance projects,
+                        collaborations, and opportunities
+                        involving web development,
+                        digital products, and creative tools.
+                    </p>
+                </div>
+
+                {/* Contact List */}
+                <div className="border-t border-[#DDD6CB]">
+
+                    <div className="py-8 border-b border-[#DDD6CB] flex flex-col md:flex-row md:justify-between gap-3">
+                        <span className="text-[#7A746D] uppercase tracking-[0.15em] text-sm">
+                            Email
+                        </span>
+
+                        <a
+                            href="mailto:romizaisyweb@gmail.com"
+                            className="hover:opacity-60 transition-opacity"
+                        >
+                            romizaisyweb@gmail.com
+                        </a>
+                    </div>
+
+                    <div className="py-8 border-b border-[#DDD6CB] flex flex-col md:flex-row md:justify-between gap-3">
+                        <span className="text-[#7A746D] uppercase tracking-[0.15em] text-sm">
+                            Phone
+                        </span>
+
+                        <a
+                            href="tel:+6282136374249"
+                            className="hover:opacity-60 transition-opacity"
+                        >
+                            +62 821 3637 4249
+                        </a>
+                    </div>
+
+                    <div className="py-8 border-b border-[#DDD6CB] flex flex-col md:flex-row md:justify-between gap-3">
+                        <span className="text-[#7A746D] uppercase tracking-[0.15em] text-sm">
+                            Instagram
+                        </span>
+
+                        <a
+                            href="https://instagram.com/romizaisyy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:opacity-60 transition-opacity"
+                        >
+                            @romizaisyy
+                        </a>
+                    </div>
+
+                </div>
+
+                {/* Footer Note */}
+                <div className="mt-20 text-[#7A746D] text-sm">
+                    Based in Indonesia · Available for remote work
                 </div>
             </div>
-            <div className="h-64"></div>
-
         </section>
     );
 }

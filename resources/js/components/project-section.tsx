@@ -1,42 +1,156 @@
-import '../../css/app.css';
-
 export default function Project() {
+    const projects = [
+        {
+            title: "Akuntax Edu",
+            year: "2025",
+            description:
+                "Educational platform developed for Universitas Sebelas Maret, focused on taxation and accounting learning resources.",
+            image: "images/akuntaxedu.png",
+            link: "https://www.akuntaxedu.tech",
+        },
+        {
+            title: "Accounting Transformation Journal",
+            year: "2025",
+            description:
+                "Academic journal publication platform built to support research dissemination and scholarly communication.",
+            image: "images/journal-publication.png",
+            link: "https://pttransformasirekaadinamikainovasi.com/jurnal/index.php/accounting-transformation/index",
+        },
+        {
+            title: "Karya Gendhis Pustaka",
+            year: "2025",
+            description:
+                "Publishing and e-commerce website for books, printing services, and educational content.",
+            image: "images/ecommerce.png",
+            link: "https://karyagendhispustaka.com",
+        },
+    ];
+
     return (
-        <section id='project' className="h-full bg-black text-white scroll-mt-16">
-            <div className="mx-auto w-[80%]">
-                <div className="mx-auto w-[80%] py-5">
-                    <p className="py-5 text-4xl md:text-6xl font-light">// My Project</p>
+        <section
+            id="project"
+            className="
+                bg-[#F5F0E8]
+                text-[#1F1F1F]
+                py-32
+                scroll-mt-24
+            "
+        >
+            <div className="w-[90%] max-w-[1200px] mx-auto">
+                
+                {/* Section Header */}
+                <div className="mb-24">
+                    <p
+                        className="
+                            text-xs
+                            uppercase
+                            tracking-[0.35em]
+                            text-[#7A746D]
+                            mb-6
+                        "
+                    >
+                        Selected Work
+                    </p>
 
-                    <div className="grid grid-cols-1 gap-10 md:gap-42">
-                        
-                        <div className="mt-8 grayscale-100 border-4 border-black text-center overflow-hidden hover:grayscale-0 transition-all duration-600 hover:border-white">
-                            <a href="https://www.akuntaxedu.tech" target='_blank'>
-                                <img className='' src="images/akuntaxedu.png" alt="" />
-                            </a>
-                            <p>Universitas Sebelas Maret Tax Education Website - akuntaxedu.tech</p>
-                        </div>
+                    <h2
+                        className="
+                            font-serif
+                            text-5xl
+                            md:text-7xl
+                            font-normal
+                            leading-none
+                        "
+                    >
+                        Projects & Case Studies
+                    </h2>
+                </div>
 
-                        <div className='grayscale-100 border-4 border-black text-center overflow-hidden hover:grayscale-0 transition-all duration-600 hover:border-white'>
-                            <a href="https://pttransformasirekaadinamikainovasi.com/jurnal/index.php/accounting-transformation/index" target="_blank">
-                                <img src="images/journal-publication.png" alt="" />
-                            </a>
-                            <p>Journal Publication Website</p>
-                        </div>
+                {/* Projects */}
+                <div className="space-y-40">
+                    {projects.map((project, index) => (
+                        <article
+                            key={project.title}
+                            className="border-t border-[#DDD6CB] pt-12"
+                        >
+                            <div className="grid md:grid-cols-12 gap-10">
+                                
+                                {/* Left Column */}
+                                <div className="md:col-span-4">
+                                    <p className="text-sm text-[#7A746D] mb-4">
+                                        {String(index + 1).padStart(2, "0")}
+                                    </p>
 
-                        <div className="grayscale-100 border-4 border-black text-center overflow-hidden hover:grayscale-0 transition-all duration-600 hover:border-white">
-                            <a href="https://karyagendhispustaka.com" target='_blank'>
-                                <img src="images/ecommerce.png" alt="" />
-                            </a>
-                            <p>E-Commerce Website</p>
-                        </div>
+                                    <h3
+                                        className="
+                                            font-serif
+                                            text-4xl
+                                            md:text-5xl
+                                            font-normal
+                                            mb-6
+                                        "
+                                    >
+                                        {project.title}
+                                    </h3>
 
-                    </div>
+                                    <p
+                                        className="
+                                            text-[#5D5852]
+                                            leading-relaxed
+                                            mb-8
+                                        "
+                                    >
+                                        {project.description}
+                                    </p>
 
-                    
-                    
+                                    <p className="text-sm text-[#7A746D] mb-8">
+                                        {project.year}
+                                    </p>
+
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="
+                                            inline-block
+                                            border-b
+                                            border-[#1F1F1F]
+                                            pb-1
+                                            text-sm
+                                            uppercase
+                                            tracking-[0.15em]
+                                            hover:opacity-60
+                                            transition-opacity
+                                        "
+                                    >
+                                        View Project
+                                    </a>
+                                </div>
+
+                                {/* Image */}
+                                <div className="md:col-span-8">
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="
+                                                w-full
+                                                object-cover
+                                                transition-all
+                                                duration-700
+                                                hover:scale-[1.01]
+                                            "
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    ))}
                 </div>
             </div>
-            <div className="h-64"></div>
         </section>
     );
 }
