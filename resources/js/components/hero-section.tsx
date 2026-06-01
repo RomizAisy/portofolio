@@ -59,10 +59,7 @@ export default function Hero() {
                         text-[#5D5852]
                     "
                 >
-                    Designing and building digital products,
-                    educational platforms, and creative tools
-                    with a focus on simplicity and thoughtful
-                    user experiences.
+                    Full-Stack Developer building modern web applications, SaaS platforms, and digital solutions with a focus on performance, scalability, and user experience.
                 </p>
 
                 {/* Actions */}
@@ -114,9 +111,9 @@ export default function Hero() {
                         text-[#7A746D]
                     "
                 >
-                    <span>Semarang, Indonesia</span>
-                    <span>Web Development</span>
-                    <span>Laravel · React · Flask</span>
+                    <span>Surakarta, Indonesia</span>
+                    <span>Full-Stack Developer</span>
+                    <span>Python - Flask - Laravel</span>
                 </div>
             </div>
         </section>

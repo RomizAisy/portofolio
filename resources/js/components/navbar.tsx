@@ -18,8 +18,10 @@ export function Navbar() {
 
     const links = [
         { href: "#project", label: "Work" },
+        { href: "#experience", label: "Experience" },
         { href: "#about", label: "About" },
         { href: "#contact", label: "Contact" },
+        
     ];
 
     return (
@@ -129,7 +131,7 @@ export function Navbar() {
                                     mt-1
                                 "
                             >
-                                Digital Creator
+                                Full-Stack Developer
                             </span>
                         </div>
                     </a>

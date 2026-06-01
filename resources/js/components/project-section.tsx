@@ -1,29 +1,23 @@
 export default function Project() {
     const projects = [
         {
-            title: "Akuntax Edu",
+            title: "clippera.id",
+            year: "2025",
+            description:
+                "AI-powered video editing platform designed to automate subtitle generation, styling, and content repurposing for creators seeking faster production workflows.",
+            image: "images/clippera.jpg",
+            link: "https://www.clippera.id",
+        },
+        {
+            title: "akuntaxedu.com",
             year: "2025",
             description:
                 "Educational platform developed for Universitas Sebelas Maret, focused on taxation and accounting learning resources.",
             image: "images/akuntaxedu.png",
-            link: "https://www.akuntaxedu.tech",
+            link: "https://www.akuntaxedu.com",
         },
-        {
-            title: "Accounting Transformation Journal",
-            year: "2025",
-            description:
-                "Academic journal publication platform built to support research dissemination and scholarly communication.",
-            image: "images/journal-publication.png",
-            link: "https://pttransformasirekaadinamikainovasi.com/jurnal/index.php/accounting-transformation/index",
-        },
-        {
-            title: "Karya Gendhis Pustaka",
-            year: "2025",
-            description:
-                "Publishing and e-commerce website for books, printing services, and educational content.",
-            image: "images/ecommerce.png",
-            link: "https://karyagendhispustaka.com",
-        },
+        
+        
     ];
 
     return (
@@ -37,7 +31,7 @@ export default function Project() {
             "
         >
             <div className="w-[90%] max-w-[1200px] mx-auto">
-                
+
                 {/* Section Header */}
                 <div className="mb-24">
                     <p
@@ -70,13 +64,24 @@ export default function Project() {
                     {projects.map((project, index) => (
                         <article
                             key={project.title}
-                            className="border-t border-[#DDD6CB] pt-12"
+                            className="
+                                group
+                                border-t
+                                border-[#DDD6CB]
+                                pt-12
+                            "
                         >
-                            <div className="grid md:grid-cols-12 gap-10">
-                                
-                                {/* Left Column */}
-                                <div className="md:col-span-4">
-                                    <p className="text-sm text-[#7A746D] mb-4">
+                            <div className="grid md:grid-cols-12 gap-12 items-start">
+
+                                {/* Content */}
+                                <div className="md:col-span-5">
+                                    <p
+                                        className="
+                                            text-sm
+                                            text-[#7A746D]
+                                            mb-4
+                                        "
+                                    >
                                         {String(index + 1).padStart(2, "0")}
                                     </p>
 
@@ -102,7 +107,13 @@ export default function Project() {
                                         {project.description}
                                     </p>
 
-                                    <p className="text-sm text-[#7A746D] mb-8">
+                                    <p
+                                        className="
+                                            text-sm
+                                            text-[#7A746D]
+                                            mb-8
+                                        "
+                                    >
                                         {project.year}
                                     </p>
 
@@ -127,29 +138,40 @@ export default function Project() {
                                 </div>
 
                                 {/* Image */}
-                                <div className="md:col-span-8">
+                                <div className="md:col-span-7 flex justify-center">
                                     <a
                                         href={project.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        className="block"
                                     >
                                         <img
                                             src={project.image}
                                             alt={project.title}
                                             className="
                                                 w-full
-                                                object-cover
+                                                max-w-[550px]
+
+                                                border
+                                                border-[#DDD6CB]
+
+                                                grayscale
+                                                group-hover:grayscale-0
+
                                                 transition-all
                                                 duration-700
-                                                hover:scale-[1.01]
+
+                                                group-hover:scale-[1.02]
                                             "
                                         />
                                     </a>
                                 </div>
+
                             </div>
                         </article>
                     ))}
                 </div>
+
             </div>
         </section>
     );

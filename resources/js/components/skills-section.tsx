@@ -8,7 +8,7 @@ export default function Skills() {
         {
             title: "Backend Development",
             description:
-                "PHP, Flask, REST APIs, MySQL",
+                "Flask, REST APIs, MySQL",
         },
         {
             title: "Content Platforms",
@@ -19,6 +19,11 @@ export default function Skills() {
             title: "Media Automation",
             description:
                 "FFmpeg, Subtitle Processing, AI-Assisted Workflows",
+        },
+        {
+            title: "Infrastructure & DevOps",
+            description:
+                "Docker, Linux, Git",
         },
     ];
 

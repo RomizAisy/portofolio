@@ -5,6 +5,7 @@ import Hero from '@/components/hero-section';
 import { Navbar } from '@/components/navbar';
 import Project from '@/components/project-section';
 import Skills from '@/components/skills-section';
+import Experience from '@/components/experience';
 
 export default function Welcome() {
     return (
@@ -13,6 +14,7 @@ export default function Welcome() {
             <Hero />
             <Project />
             <Skills />
+            <Experience />
             <About />
             <Contact />
             <BFooter />

@@ -85,7 +85,7 @@ export default function About() {
                             </p>
 
                             <p>
-                                My work focuses on Laravel, React, and modern
+                                My work focuses on Flask, Python, and modern
                                 web technologies, with a growing interest in
                                 automation, content creation workflows, and
                                 AI-powered tools.
