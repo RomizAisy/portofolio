@@ -99,6 +99,20 @@ export default function Contact() {
                             @romizaisyy
                         </a>
                     </div>
+                    <div className="py-8 border-b border-[#DDD6CB] flex flex-col md:flex-row md:justify-between gap-3">
+                        <span className="text-[#7A746D] uppercase tracking-[0.15em] text-sm">
+                            Github
+                        </span>
+
+                        <a
+                            href="https://github.com/RomizAisy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:opacity-60 transition-opacity"
+                        >
+                            RomizAisy
+                        </a>
+                    </div>
 
                 </div>
 
